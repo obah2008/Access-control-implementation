@@ -41,3 +41,19 @@ sudo groupadd hr
 we can confirm the groups were created using `cat /etc/group`
 
 #### Creating Users
+Using the command below we can create users and add them to anyone of the three groups we previously created
+```bash
+sudo useradd -m -s /bin/bash -g department account_name
+sudo passwd acount_name
+```
+using the command above we can create accounts and assign them to different groups
+
+| Username | Group       |  Notes        |
+|----------|------------|-------------------|
+| max      | engineering | Engineer           |
+| michael  | engineering | Engineer           |
+| charles  | hr          | HR personnel       |
+| daniel   | finance     | Accountant         |
+| lewis    | finance     | Accountant         |
+
+To confirm the users have been successfully created and are in their respective groups, we can run `id account_name`
