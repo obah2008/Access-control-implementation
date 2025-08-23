@@ -12,7 +12,7 @@ The project will essentially go this way, we'll create a directory with a few su
 As stated earlier we'll be creating a sandbox environment where we can practice different types of access control methods without affecting the rest of the system.
 on to creating the test directory, below is how the folders will be structured
 ```bash
-HABOtech/
+HABO_Racing/
 ├── projects/
 │   ├── finance/
 │   │   ├── budget.txt
