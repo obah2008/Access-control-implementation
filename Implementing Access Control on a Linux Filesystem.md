@@ -29,3 +29,13 @@ HABOtech/
 ```
 
 ### Step 2: Creating users and groups
+The next step is to create groups for each of the comapanies departments(Hr, Engineering and finance) and then create users who will be assigned to various groups for shared access
+
+#### Create a group
+Using the command below we'll be creating groups for the Hr, finance and engineering departments
+```bash
+sudo groupadd engineering
+sudo groupadd finance
+sudo groupadd hr
+```
+
