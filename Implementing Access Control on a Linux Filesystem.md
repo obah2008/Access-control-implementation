@@ -38,4 +38,6 @@ sudo groupadd engineering
 sudo groupadd finance
 sudo groupadd hr
 ```
+we can confirm the groups were created using `cat /etc/group`
 
+#### Creating Users
