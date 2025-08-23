@@ -27,3 +27,5 @@ HABOtech/
     ├── announcements.txt
     └── policies.txt
 ```
+
+### Step 2: Creating users and groups
