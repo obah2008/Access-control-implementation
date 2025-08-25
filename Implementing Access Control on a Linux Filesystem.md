@@ -107,3 +107,8 @@ setfacl -m g:management:rwx /srv/projects/sales
 setfacl -R -m u:toto:rwx /srv/projects/sales
 setfacl -R -m g:management:rwx /srv/projects/sales
 ```
+To confirm the ACLs have been created successfully run
+```
+getfacl /srv/projects/sales
+```
+You should see Toto and the management group listed with rwx rights, alongside the original owner and department group permissions.
