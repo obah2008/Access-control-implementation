@@ -57,3 +57,15 @@ using the command above we can create accounts and assign them to different grou
 | lewis    | finance     | Accountant         |
 
 To confirm the users have been successfully created and are in their respective groups, we can run `id account_name`
+
+### Setting up Permissions and Ownership
+The next step will be to grant permissions and ownership based on the Group roles, while this may resemble RBAC, it's really DAC since we(the resource owner) are assigning permissions to various groups
+
+#### Assign group ownership to each department folder
+Each department folder should belong to its respective group, so we'll use the command below to achieve this
+```bash
+sudo chown :finance HABO_Racing/projects/finance
+sudo chown :engineering HABO_Racing/projects/engineering
+sudo chown :hr HABO_Racing/projects/hr
+```
+
