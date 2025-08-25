@@ -94,21 +94,21 @@ We’ll use `setfacl` to give management universal read, write, and execute righ
 
 - Give Toto (user) full access to the Sales folder
 ```bash
-setfacl -m u:toto:rwx /srv/projects/sales
+setfacl -m u:toto:rwx /HABO_Racing/projects/sales
 ```
 
 - Give the management group full access to the Sales folder
 ```bash
-setfacl -m g:management:rwx /srv/projects/sales
+setfacl -m g:management:rwx /HABO_Racing/projects/sales
 ```
         
 - Apply the same ACLs recursively to all files and subfolders
 ```bash
-setfacl -R -m u:toto:rwx /srv/projects/sales
-setfacl -R -m g:management:rwx /srv/projects/sales
+setfacl -R -m u:toto:rwx /HABO_Racing/projects/sales
+setfacl -R -m g:management:rwx /HABO_Racing/projects/sales
 ```
 To confirm the ACLs have been created successfully run
 ```
-getfacl /srv/projects/sales
+getfacl /HABO_Racing/projects/sales
 ```
 You should see Toto and the management group listed with rwx rights, alongside the original owner and department group permissions.
