@@ -76,6 +76,6 @@ We want only members of the department group to access their folder, so we'll ch
 sudo chmod 770 HABO_Racing/projects/finance
 sudo chmod 770 HABO_Racing/projects/engineering
 sudo chmod 770 HABO_Racing/projects/hr
-sudo chmod 770 HABO_Racing/projects/shared
+sudo chmod 775 HABO_Racing/projects/shared
 ```
 
