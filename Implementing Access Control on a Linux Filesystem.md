@@ -69,3 +69,12 @@ sudo chown :engineering HABO_Racing/projects/engineering
 sudo chown :hr HABO_Racing/projects/hr
 ```
 
+#### Set group permissions on department folders
+
+We want only members of the department group to access their folder, so we'll change the permissions to make sure only the Resource owner and respective groups have access and can make changes
+```bash
+sudo chmod 770 HABO_Racing/projects/finance
+sudo chmod 770 HABO_Racing/projects/engineering
+sudo chmod 770 HABO_Racing/projects/hr
+```
+
