@@ -50,6 +50,7 @@ using the command above we can create accounts and assign them to different grou
 
 | Username | Group       |  Notes        |
 |----------|------------|-------------------|
+| toto     | Management  | Team principal     |
 | max      | engineering | Engineer           |
 | michael  | engineering | Engineer           |
 | charles  | hr          | HR personnel       |
@@ -78,4 +79,10 @@ sudo chmod 770 HABO_Racing/projects/engineering
 sudo chmod 770 HABO_Racing/projects/hr
 sudo chmod 775 HABO_Racing/projects/shared
 ```
+
+### Creating ACLs
+
+Using the regular owner–group model works in a lot of cases, but it’s not always the best when you need more control. Say you’ve got multiple groups that need access to the same folder, or maybe a couple of users need access to a resource without being in the same group. That’s where ACLs come in.
+
+We’ll set up ACLs so that Toto, our team principal, and any future members of the management team have full access to each resource, while still keeping the permissions we’ve already put in place.
 
