@@ -34,6 +34,7 @@ The next step is to create groups for each of the comapanies departments(Hr, Eng
 #### Create a group
 Using the command below we'll be creating groups for the Hr, finance and engineering departments
 ```bash
+sudo groupadd management
 sudo groupadd engineering
 sudo groupadd finance
 sudo groupadd hr
@@ -86,3 +87,23 @@ Using the regular owner–group model works in a lot of cases, but it’s not al
 
 We’ll set up ACLs so that Toto, our team principal, and any future members of the management team have full access to each resource, while still keeping the permissions we’ve already put in place.
 
+#### Example: Granting Management Full Access
+
+Suppose our project directories live under `/HABO_Racing/projects`.  
+We’ll use `setfacl` to give management universal read, write, and execute rights:
+
+- Give Toto (user) full access to the Sales folder
+```bash
+setfacl -m u:toto:rwx /srv/projects/sales
+```
+
+- Give the management group full access to the Sales folder
+```bash
+setfacl -m g:management:rwx /srv/projects/sales
+```
+        
+- Apply the same ACLs recursively to all files and subfolders
+```bash
+setfacl -R -m u:toto:rwx /srv/projects/sales
+setfacl -R -m g:management:rwx /srv/projects/sales
+```
